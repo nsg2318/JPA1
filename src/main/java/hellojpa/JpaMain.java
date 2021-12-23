@@ -15,11 +15,14 @@ public class JpaMain {
         tx.begin();
         //code
         try {
-            JpaMember jpaMember1 = new JpaMember(150L, "a");
-            JpaMember jpaMember2 = new JpaMember(151L, "b");
-            //persist 마다 쿼리를 날리면 최적화 여지가 없다.
-            em.persist(jpaMember1);
-            em.persist(jpaMember2);
+//            JpaMember jpaMember1 = new JpaMember(150L, "a");
+//            JpaMember jpaMember2 = new JpaMember(151L, "b");
+//            //persist 마다 쿼리를 날리면 최적화 여지가 없다.
+//            em.persist(jpaMember1);
+//            em.persist(jpaMember2);
+
+            JpaMember jpaMember = new JpaMember(200L,"member200");
+            em.persist(jpaMember);
 
             System.out.println("==================");
             tx.commit();
