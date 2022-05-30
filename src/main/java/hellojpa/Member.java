@@ -5,17 +5,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-//테이블 명이 기본 규칙과 다른경우
-@Table(name = "JPAMEMBER")
-public class JpaMember {
+@Table(name = "MEMBER")
+public class Member {
 
     @Id
     private Long id;
     private String name;
 
-    public JpaMember(){}
+    public Member(){}
 
-    public JpaMember(Long id, String name) {
+    public Member(Long id, String name) {
         this.id = id;
         this.name = name;
     }
