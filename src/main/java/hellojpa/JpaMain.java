@@ -7,26 +7,21 @@ import javax.persistence.Persistence;
 
 public class JpaMain {
     public static void main(String[] args) {
-
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
-        tx.begin();
-        //code
-        try {
-            Member member = em.find(Member.class, 200L);
-            member.setName("asdkfjls");
-
-
-
-            //트랜잭션 커밋
-            tx.commit();
-        } catch (Exception e){
-            tx.rollback();
-        }
-        finally {
-            em.close();
-        }
-        emf.close();
+//        tx.begin();
+//        //code
+//        try {
+//
+//            //트랜잭션 커밋
+//            tx.commit();
+//        } catch (Exception e){
+//            tx.rollback();
+//        }
+//        finally {
+//            em.close();
+//        }
+//        emf.close();
     }
 }
