@@ -14,8 +14,12 @@ public class JpaMain {
         //code
         try {
 
-//            Member member = new Member("김");
-//            Member member = em.find(Member.class, 1L);
+            Movie movie = new Movie();
+            movie.setDirector("가나다라");
+            movie.setName("is this work?");
+
+
+            em.persist(movie);
 //
 //            Delivery delivery = new Delivery("city","street");
 //            Delivery delivery = em.find(Delivery.class, 2L);
