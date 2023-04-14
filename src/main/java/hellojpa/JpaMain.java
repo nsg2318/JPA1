@@ -16,7 +16,7 @@ public class JpaMain {
 
             Movie movie = new Movie();
             movie.setDirector("가나다라");
-            movie.setName("is this work?");
+            movie.setCreatedBy("홍길동");
 
 
             em.persist(movie);
