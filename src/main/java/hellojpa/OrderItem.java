@@ -2,6 +2,8 @@ package hellojpa;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Table(name = "ORDER_ITEM")
 public class OrderItem {
@@ -9,11 +11,11 @@ public class OrderItem {
     @GeneratedValue
     private Long order_item_id;
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "ORDER_ID")
     private Order order;
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 

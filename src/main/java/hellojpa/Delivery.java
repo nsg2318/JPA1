@@ -2,6 +2,8 @@ package hellojpa;
 
 import javax.persistence.*;
 
+import static javax.persistence.CascadeType.ALL;
+
 @Entity
 @Table(name = "DELIVERY")
 public class Delivery {
@@ -13,7 +15,7 @@ public class Delivery {
     @GeneratedValue
     private Long delivery_id;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery", cascade = ALL)
     private Order order;
 
     private String city;
